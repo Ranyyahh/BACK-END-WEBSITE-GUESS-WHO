@@ -1,14 +1,15 @@
 CREATE DATABASE GuessWho_db;
 
 USE GuessWho_db;
+
 CREATE TABLE Messages_tbl (
-id INT AUTO_INCREMENT PRIMARY KEY, 
-message TEXT NOT NULL, 
-color VARCHAR(9) NOT NULL, 
-recipient VARCHAR(100) NOT NULL, 
-sender VARCHAR(100) DEFAULT 'Anonymous', 
-submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-likes INT DEFAULT 0
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    message VARCHAR(100) NOT NULL, 
+    color VARCHAR(9) NOT NULL, 
+    recipient VARCHAR(50) NOT NULL, 
+    sender VARCHAR(100) DEFAULT 'Anonymous', 
+    submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    likes INT DEFAULT 0
 );
 
 CREATE TABLE MessageLikes_tbl (
